@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/css/main.css" />
+    <title>Корзина товаров</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+          <div class="pic">
+            <img src="./static/images/logo2.png" width="40" height="40" alt="Логотип">
+          </div>
+        </div>
+        <div class="header-image">
+          <img src="./static/images/dess.png">
+        </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Главная</a></li>
+        <li><a href="./kat.html">Каталог</a></li>
+        <li><a href="./otziv.html">Отзывы</a></li>
+        <li><a href="#" id="orderLink">Заказать торт</a>
+          <div id="orderModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2><font color="#000000">Заказ торта</font></h2>
+              <p><font color="#000000">Для того, чтобы заказать торт, напишите свой номер телефона, с вами свяжется наш менеджер.</font></p>
+              <form>
+                <input type="tel" id="phoneInput" placeholder="Введите номер телефона" required>
+                <button type="submit" class="submit-btn">Отправить</button>
+              </form>
+            </div>
+          </li>
+        <li><a href="./4met.html">Скидочная карта</a></li>
+        <li><a href="#" id="scroll">О нас</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  
+  
+  
+    <section class="product">
+      <div class="product__info">
+        <div class="container">
+          <h1 class="product__title">Каталог</h1>
+                </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <img
+                src="./static/images/1.jpg"
+                alt="Торт Мечта"
+              />
+            </a>
+            <div class="card__label">-10%</div>
+          </div>
+          <div class="card__bottom">
+            <div class="card__prices">
+              <div class="card__price card__price--discount">2430</div>
+              <div class="card__price card__price--common">2700</div>
+            </div>
+            <a href="./card1.html" class="card__title">
+              Торт Мечта
+            </a>
+            <button class="card__add">В корзину</button>
+          </div>
+        </div>
+       
+
+
+
+
+	   <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <img
+                src="./static/images/2.jpg"
+                alt="Торт 3 шоколада"
+              />
+            </a>
+            <div class="card__label">-10%</div>
+          </div>
+          <div class="card__bottom">
+            <div class="card__prices">
+              <div class="card__price card__price--discount">2070</div>
+              <div class="card__price card__price--common">2300</div>
+            </div>
+            <a href="./card2.html" class="card__title">
+              Торт 3 шоколада
+            </a>
+            <button class="card__add">В корзину</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <img
+                src="./static/images/3.jpg"
+                alt="Торт Клубничная сказка"
+              />
+            </a>
+            <div class="card__label">-10%</div>
+          </div>
+          <div class="card__bottom">
+            <div class="card__prices">
+              <div class="card__price card__price--discount">2880</div>
+              <div class="card__price card__price--common">3200</div>
+            </div>
+            <a href="./card3.html" class="card__title">
+              Торт Клубничная сказка
+            </a>
+            <button class="card__add">В корзину</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <img
+                src="./static/images/4.jpg"
+                alt="Торт Летняя пора"
+              />
+            </a>
+            <div class="card__label">-10%</div>
+          </div>
+          <div class="card__bottom">
+            <div class="card__prices">
+              <div class="card__price card__price--discount">2340</div>
+              <div class="card__price card__price--common">2600</div>
+            </div>
+            <a href="./card4.html" class="card__title">
+              Торт Летняя пора
+            </a>
+            <button class="card__add">В корзину</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <img
+                src="./static/images/5.jpg"
+                alt="Торт Клубничная вечеринка"
+              />
+            </a>
+            <div class="card__label">-10%</div>
+          </div>
+          <div class="card__bottom">
+            <div class="card__prices">
+              <div class="card__price card__price--discount">2610</div>
+              <div class="card__price card__price--common">2900</div>
+            </div>
+            <a href="./card5.html" class="card__title">
+              Торт Клубничная вечеринка
+            </a>
+            <button class="card__add">В корзину</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <img
+                src="./static/images/6.jpg"
+                alt="Торт Сладость любви"
+              />
+            </a>
+            <div class="card__label">-10%</div>
+          </div>
+          <div class="card__bottom">
+            <div class="card__prices">
+              <div class="card__price card__price--discount">2430</div>
+              <div class="card__price card__price--common">2700</div>
+            </div>
+            <a href="./card6.html" class="card__title">
+              Торт Сладость любви</a>
+            <button class="card__add">В корзину</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <img
+                src="./static/images/7.jpg"
+                alt="Торт Нежность"
+              />
+            </a>
+            <div class="card__label">-10%</div>
+          </div>
+          <div class="card__bottom">
+            <div class="card__prices">
+              <div class="card__price card__price--discount">2790</div>
+              <div class="card__price card__price--common">3100</div>
+            </div>
+            <a href="./card7.html" class="card__title">
+              Торт Нежность</a>
+            <button class="card__add">В корзину</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <img
+                src="./static/images/8.jpg"
+                alt="Торт Фурина"
+              />
+            </a>
+            <div class="card__label">-10%</div>
+          </div>
+          <div class="card__bottom">
+            <div class="card__prices">
+              <div class="card__price card__price--discount">2880</div>
+              <div class="card__price card__price--common">3200</div>
+            </div>
+            <a href="./card8.html" class="card__title">
+              Торт Фурина</a
+            >
+            <button class="card__add">В корзину</button>
+          </div>
+        </div>
+      </div>
+   
+
+
+
+
+   </section>
+    <button class="cart" id="cart">
+      <img class="cart__image" src="./static/images/cart.png" alt="Cart" srcset="" />
+      <div class="cart__num" id="cart_num">0</div>
+    </button>
+    
+	<!--Разметка окна оформления заказа:-->
+	<div class="popup">
+      <div class="popup__container" id="popup_container">
+        <div class="popup__item">
+          <h1 class="popup__title">Оформление заказа</h1>
+        </div>
+       
+	   <div class="popup__item" id="popup_product_list">
+          <div class="popup__product">
+            <div class="popup__product-wrap">
+              <img
+                src="./images/1.jpg"
+                alt=""
+                class="popup__product-image"
+              />
+              <h2 class="popup__product-title">
+               
+              </h2>
+            </div>
+            <div class="popup__product-wrap">
+              <div class="popup__product-price"></div>
+              <button class="popup__product-delete">&#10006;</button>
+            </div>
+          </div>
+        </div>
+		
+		
+		
+        <div class="popup__item">
+          <div class="popup__cost">
+            <h2 class="popup__cost-title">Итого</h2>
+            <output class="popup__cost-value" id="popup_cost">0</output>
+          </div>
+          <div class="popup__cost">
+            <h2 class="popup__cost-title">Скидка</h2>
+            <output class="popup__cost-value" id="popup_discount">0</output>
+          </div>
+          <div class="popup__cost">
+            <h2 class="popup__cost-title">Итого со скидкой</h2>
+            <output class="popup__cost-value" id="popup_cost_discount"
+              >0</output
+            >
+          </div>
+        </div>
+        <button class="popup__close" id="popup_close">&#10006;</button>
+      </div>
+    </div>
+    <footer>
+      <div class="contacts">
+        <h3>Контакты</h3>
+        <p>Телефон: +7 967 402 23 15</p>
+    
+      </div>
+      <div class="social">
+        <h3>Социальные сети</h3>
+        <ul>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">VK</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="address">
+        <h3>Адрес</h3>
+        <p>Ростов-на-Дону, Соборный 96</p>
+      </div>
+    </footer>
+
+    
+
+   <script src="./scripts/main.js"></script>
+  </body>
+</html>

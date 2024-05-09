@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Анкета для получения карты постоянного клиента</title>
+  <link rel="stylesheet" href="style4.css" />
+  <script>
+    function capitalizeText(elementId) {
+      var input = document.getElementById(elementId);
+      input.value = input.value.toUpperCase(); // Преобразует текст в поле ввода в заглавные буквы
+    }
+
+    function submitForm() {
+      var lastName = document.getElementById('last-name').value.toUpperCase(); // Получает значение фамилии и преобразует его в заглавные буквы
+      var firstName = document.getElementById('first-name').value.toUpperCase(); // Получает значение имени и преобразует его в заглавные буквы
+      var age = document.getElementById('age').value; // Получает значение возраста
+
+      if (age < 18) { // Проверка возраста на условие "меньше 18"
+        alert("Карта выдается только после 18 лет"); // Выводит сообщение об ошибке
+        return;
+      }
+
+      var cardNumber = Math.floor(Math.random() * 1000000); // Генерирует случайное число для номера карты
+      var message = "Номер карты: " + cardNumber + "\nФамилия: " + lastName + "\nИмя: " + firstName; // Формирует сообщение с номером карты, фамилией и именем
+
+      alert(message); // Выводит диалоговое окно с информацией о номере карты, фамилии и имени
+    }
+
+    function resetForm() {
+      document.getElementById('last-name').value = ""; // Сбрасывает поле фамилии
+      document.getElementById('first-name').value = ""; // Сбрасывает поле имени
+      document.getElementById('age').value = ""; // Сбрасывает поле возраста
+    }
+  </script>
+</head>
+<body>
+  <div id="main">
+  <h1>Анкета для получения карты постоянного клиента</h1>
+
+  <div id="f">
+  <form>
+    <label for="last-name">Фамилия:</label>
+    <input type="text" id="last-name" name="last-name" onchange="capitalizeText('last-name')"><br> <!-- Используется функция capitalizeText() при изменении значения поля фамилии -->
+
+    <label for="first-name">Имя:</label>
+    <input type="text" id="first-name" name="first-name" onchange="capitalizeText('first-name')"><br> <!-- Используется функция capitalizeText() при изменении значения поля имени -->
+
+    <label for="age">Возраст:</label>
+    <input type="number" id="age" name="age"><br> <!-- Поле для ввода возраста -->
+
+    <button type="button" onclick="submitForm()">Отправить</button> <!-- Выполняет функцию submitForm() при нажатии -->
+    <button type="reset" onclick="resetForm()">Ввести данные заново</button> <!-- Выполняет функцию resetForm() при нажатии -->
+  </form>
+</div>
+</div>
+</body>
+</html>

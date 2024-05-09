@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>formm</title>
+		<link rel="stylesheet" href="./static/css/style3.css" />
+	</head>
+
+    <body>
+        <h1>Оставьте нам отзыв</h1>
+  <div id="feedback-form">
+    <form onsubmit="return validateForm()"> <!-- Выполнение функции validateForm() при отправке формы -->
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="name" required> <!-- Поле для ввода имени -->
+
+      <label for="email">Адрес электронной почты</label>
+      <input type="email" id="email" name="email" required> <!-- Поле для ввода адреса электронной почты -->
+
+      <label for="review">Отзыв</label>
+      <textarea id="review" name="review" required></textarea> <!-- Поле для ввода отзыва -->
+
+      <input type="submit" value="Отправить"> <!-- Кнопка отправки формы -->
+
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      // Проверка правильности ввода данных
+      var name = document.getElementById('name').value.trim(); // Получение значения из поля имени и удаление пробелов
+      var email = document.getElementById('email').value.trim(); // Получение значения из поля адреса электронной почты и удаление пробелов
+      var review = document.getElementById('review').value.trim(); // Получение значения из поля отзыва и удаление пробелов
+
+      if (name === "" || email === "" || review === "") { // Проверка заполненности всех полей
+        alert("Пожалуйста, заполните все поля");
+        return false; // Отмена отправки формы
+      }
+
+      // Если все условия выполнены, отобразить сообщение
+      alert("Ваш отзыв отправлен");
+      return true; // Продолжение отправки формы
+    }
+  </script>
+</body>
+    </body>
+
+
+</html>

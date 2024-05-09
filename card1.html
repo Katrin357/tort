@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+    <div class="card">
+        <h2>Торт Мечта</h2>
+        <div class="images">
+            <img src="./static/images/1.jpg" alt="Изображение товара 1" id="mainImage">
+            <img src="./static/images/1.jpg" alt="Изображение товара 1" class="hoverImage" style="display: none;">
+        </div>
+        <ul>
+            <p>Этот десерт – настоящий гимн соблазну и изысканному вкусу! Нежнейший шоколадный бисквит, пропитанный ароматным сиропом, переплетается с прослойками воздушного малинового мусса. Каждый кусочек – истинное наслаждение для всех чувств.</p>
+            <p> <font color="#A9A9A9">вес: 3 кг</font></p>
+        </ul>
+        <div class="rating">
+            <span class="star" onclick="rateProduct(1, 1)">☆</span>
+            <span class="star" onclick="rateProduct(1, 2)">☆</span>
+            <span class="star" onclick="rateProduct(1, 3)">☆</span>
+            <span class="star" onclick="rateProduct(1, 4)">☆</span>
+            <span class="star" onclick="rateProduct(1, 5)">☆</span>
+        </div>
+    </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

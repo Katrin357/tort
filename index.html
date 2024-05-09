@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мой сайт</title>
+<link rel="stylesheet" href="./static/css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="pic">
+              <img src="./static/images/logo2.png" width="40" height="40" alt="Логотип">
+            </div>
+          </div>
+          <div class="header-image">
+            <img src="./static/images/dess.png">
+          </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./kat.html">Каталог</a></li>
+          <li><a href="./otziv.html">Отзывы</a></li>
+          <li><a href="#" id="orderLink">Заказать торт</a>
+            <div id="orderModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><font color="#000000">Заказ торта</font></h2>
+                <p><font color="#000000">Для того, чтобы заказать торт, напишите свой номер телефона, с вами свяжется наш менеджер.</font></p>
+                <form>
+                  <input type="tel" id="phoneInput" placeholder="Введите номер телефона" required>
+                  <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+              </div>
+            </li>
+            <li><a href="./4met.html">Скидочная карта</a></li>
+          <li><a href="#" id="scroll">О нас</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+  
+    <div class="banner">
+      <img src="./static/images/1.jpg" alt="Баннер 1">
+      <img src="./static/images/2.jpg" alt="Баннер 2">
+      <img src="./static/images/3.jpg" alt="Баннер 3">
+      <img src="./static/images/4.jpg" alt="Баннер 4">
+    </div>
+  
+    <section>
+      <h1>Добро пожаловать на наш сайт</h1>
+      <p>Добро пожаловать в «Десертную симфонию» – место, где искусство кондитерского мастерства достигает новых высот!</p>
+      <p>Наша кондитерская – это настоящая симфония вкусов, ароматов и эстетики. Мы создаем авторские торты, которые не просто радуют глаз, но и дарят истинное наслаждение вашим вкусовым рецепторам.</p>
+      <p>В «Десертной симфонии» мы верим, что каждый торт – это произведение искусства, созданное с любовью и вниманием к мельчайшим деталям. Наши талантливые кондитеры – настоящие художники, использующие натуральные ингредиенты высочайшего качества в качестве своих красок. Они виртуозно сочетают текстуры, формы и вкусы, создавая истинные шедевры.
+    </p>
+      <p>Мы предлагаем широкий выбор классических и авторских тортов, которые можно заказать на любой вкус и для любого случая: свадьбы, дни рождения, корпоративные мероприятия или просто для того, чтобы порадовать себя и близких изысканным лакомством.</p>
+      <p>Но «Десертная симфония» – это не только вкусные торты, но и высокий уровень сервиса. Мы с гордостью предлагаем услугу доставки по Ростову-на-Дону, чтобы вы могли наслаждаться нашими десертами в удобное для вас время и место.</p>
+      <p>Присоединяйтесь к нашей симфонии вкусов и позвольте себе окунуться в мир кулинарного искусства!</p>
+    </section>
+  
+    <footer>
+      <div class="contacts">
+        <h3>Контакты</h3>
+        <p>Телефон: +7 967 402 23 15</p>
+    
+      </div>
+      <div class="social">
+        <h3>Социальные сети</h3>
+        <ul>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">VK</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="address">
+        <h3>Адрес</h3>
+        <p>Ростов-на-Дону, Соборный 96</p>
+      </div>
+    </footer>
+  </body>
+  
+  <script>
+    const scrollToBottomLink = document.getElementById('scroll');
+
+scrollToBottomLink.addEventListener('click', function(event) {
+  event.preventDefault(); 
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: 'smooth'
+  });
+});
+
+const orderLink = document.getElementById('orderLink');
+const modal = document.getElementById('orderModal');
+const closeBtn = document.getElementsByClassName('close')[0];
+const form = modal.querySelector('form');
+
+orderLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  modal.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+});
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const phoneNumber = document.getElementById('phoneInput').value;
+  // Здесь можно добавить код для отправки номера телефона на сервер
+  alert(`Спасибо! Ваш номер телефона: ${phoneNumber}`);
+  modal.style.display = 'none';
+});
+const submitBtn = document.querySelector('.submit-btn');
+
+submitBtn.addEventListener('mouseup', function() {
+  this.blur(); // Убираем фокус с кнопки после нажатия
+});
+  </script>
+</html>
